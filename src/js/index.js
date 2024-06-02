@@ -1,27 +1,21 @@
 // import mobileNav from './modules/mobile-nav.js';
 // mobileNav();
+import {scrollHandler, pageYTop, PageYBottom} from "./handlers/scrollHandler.js";
 
-    let faq = document.querySelector('.faq__list');
-    let faqItem = faq.querySelectorAll('.faq__item');
+import rotateHandler from "./handlers/rotateHandler.js";
 
-    function rotateHandler() {
-        let plus = this.querySelector(".faq__question").children[0];
-        let parentHeight = parseInt(getComputedStyle(this).height, 10);
-        let height = parseInt(getComputedStyle(this.querySelector(".faq__question")).height, 10);
-        let parentPadding = parseInt(getComputedStyle(this).paddingTop, 10);
-        let elSiblingHeight = parseInt(getComputedStyle(this.querySelector(".faq__answer")).height, 10);
-        
-        if (height + 2*parentPadding === parentHeight) {
-            plus.style.transform = "rotate(45deg)";
-            this.style.height = parentHeight + elSiblingHeight + "px";
-            console.log(parentHeight);
-        } else {
-            plus.style.transform = "rotate(0deg)";
-            this.style.height = parentHeight - elSiblingHeight + "px";
-            console.log(parentHeight);
-        }
-    }
+let navigation = document.getElementById("navigation");
+let about = document.getElementById("about");
+let offer = document.getElementById("offer");
+let studio = document.getElementById("studio");
+let price = document.getElementById("price");
+let faq = document.getElementById("faq");
+let footer = document.getElementById("footer");
+let links = navigation.querySelectorAll(".header__link");
 
-    faqItem.forEach((el) => {
-        el.onclick = rotateHandler;
-    })
+console.log(links)
+
+let pages = [about, offer, studio, price, faq, footer];
+
+rotateHandler();
+scrollHandler(pages, navigation, links);

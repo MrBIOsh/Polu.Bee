@@ -15,13 +15,13 @@
 			</clipPath>
 		</defs>
 	</svg>
-	<body class="body">
+	<body id="body" class="body">
 		<!-- <div class="wrapper">			 -->
 			@@include('blocks/header.html')
 			<!-- <div class="content"> -->
 				<main class="main">
 					<div class="container">
-						<section class="home">
+						<section id="home" class="home">
 							<div class="home__box">
 								<img class="home__img" src="../img/jpg/Group 738002237.png" alt="img">
 							</div>
@@ -36,7 +36,7 @@
 								<!-- </div> -->
 							</div>
 						</section>
-						<section class="about">
+						<section id="about" class="about">
 							<div class="wrapper">
 								<div class="title">
 									<pre style="white-space: pre-wrap"><h2>                          Я - Алёна, квалифицированный специалист и преподаватель по лазерной эпиляции, депиляции и ламинированию ресниц</h2></pre>
@@ -69,7 +69,7 @@
 								</div>
 							</div>
 						</section>
-						<section class="offer">
+						<section id="offer" class="offer">
 							<div class="wrapper">
 								<div class="title">
 									<pre style="white-space: pre-wrap"><h2>                          У нас действует система скидок, кэшбек на всё, а также есть выгодные предложения при покупке абонементов</h2></pre>
@@ -97,7 +97,7 @@
 								</div>
 							</div>
 						</section>
-						<section class="studio">
+						<section id="studio" class="studio">
 							<div class="wrapper">
 								<div class="title">
 									<pre style="white-space: pre-wrap"><h2>                          В студии POLU.BEE продумано всё для вашего удобства и комфорта</h2></pre>
@@ -112,12 +112,15 @@
 												<li class="studio__item">Матча зеленая и красная на ваш выбор</li>
 												<li class="studio__item">К напиткам предоставляем конфеты разных видов, а также сухофрукты и орехи</li>
 											</ul>
-										<p class="studio__description">Вы можете угоститься в студии, или взять на вынос напитки в стильных стаканчиках с крышкой и трубочкой в черном цвете.</p>
+										<p class="studio__description">Вы можете угоститься в студии, или взять на вынос напитки в стильных стаканчиках с крышкой и трубочкой в черном цвете.</p>										
+										<span class="studio__details">Узнать больше</span>
 									</div>
 									<div class="studio__hidden">
 										<div class="studio__images">
-											<img src="../img/jpg/Photo_about_studio_1.jpg" alt="photo" class="studio__img">
-											<img src="../img/jpg/Photo_about_studio_2.jpg" alt="photo" class="studio__img">
+											<div class="studio__img">												
+												<img src="../img/jpg/Photo_about_studio_1.jpg" alt="photo">
+												<img src="../img/jpg/Photo_about_studio_2.jpg" alt="photo">
+											</div>
 											<img src="../img/jpg/Photo_about_studio_3.jpg" alt="photo" class="studio__img">
 										</div>
 										<div class="studio__text">
@@ -125,11 +128,10 @@
 											<p class="studio__description">В уборной, есть салфетки матирующие, сухие и влажные салфетки, мыло и крем для рук. Также предусмотрены средства личной гигиены на разные случаи, всё в индивидуальных упаковках.</p>
 										</div>
 									</div>
-									<span class="studio__details">Узнать больше</span>
 								</div>
 							</div>
 						</section>
-						<section class="price">
+						<section id="price" class="price">
 							<div class="wrapper">
 								<div class="title">
 									<pre style="white-space: pre-wrap"><h2>                         У нас широкий спектр услуг по приятным ценам, а В стоимость комплексов услуг заложена 20% скидка</h2></pre>
@@ -255,14 +257,14 @@
 											</ul>
 										</div>
 										<div class="price__logo">
-											<img src="../img/jpg/logo.png" alt="logo">
+											<img src="../img/jpg/BLISSCO-beauty.png" alt="logo">
 										</div>
 									</div>
 								</div>
 								<a href="#" class="button">Записаться онлайн</a>
 							</div>
 						</section>
-						<section class="faq">
+						<section id="faq" class="faq">
 							<div class="wrapper">
 								<div class="title">
 									<pre style="white-space: pre-wrap"><h2>                          Здесь вы найдёте ответы на важные для вас вопросы, а также сможете связаться с нами</h2></pre>
@@ -287,7 +289,7 @@
 								</div>
 							</div>
 						</section>
-						<section class="invite">
+						<section id="invite" class="invite">
 							<div class="wrapper">
 								<div class="title">
 									<pre style="white-space: pre-wrap"><h2>                          Здесь вы найдёте ответы на важные для вас вопросы, а также сможете связаться с нами</h2></pre>
