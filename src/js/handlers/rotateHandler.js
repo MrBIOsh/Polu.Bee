@@ -13,11 +13,9 @@ export default () => {
         if (height + 2*parentPadding === parentHeight) {
             plus.style.transform = "rotate(45deg)";
             this.style.height = parentHeight + elSiblingHeight + "px";
-            console.log(parentHeight);
         } else {
             plus.style.transform = "rotate(0deg)";
             this.style.height = parentHeight - elSiblingHeight + "px";
-            console.log(parentHeight);
         }
     }
 

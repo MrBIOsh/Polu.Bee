@@ -24,8 +24,7 @@ function scrollHandler(pages, header, links) {
         links[index].style.color = "#FBB88C";        
         links[index].style.opacity = 1;
       }
-    })
-    
+    })    
   });
 }
 
