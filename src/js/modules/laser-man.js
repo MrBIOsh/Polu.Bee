@@ -1,4 +1,5 @@
-<ul class="price__list">
+export default function LaserMan() {
+    return `<ul class="price__list">
     <li class="price__item">
         <span class="price__name">Подмышечные впадины</span>
         <span class="price__value">1 800</span>
@@ -39,4 +40,5 @@
         <span class="price__name">Маленькая доп зона</span>
         <span class="price__value">1 200</span>
     </li>
-</ul>
+</ul>`
+}

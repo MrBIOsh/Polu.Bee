@@ -3,8 +3,6 @@
 import {scrollHandler} from "./handlers/scrollHandler.js";
 import {handleClick} from "./handlers/activeHandler.js";
 
-import rotateHandler from "./handlers/rotateHandler.js";
-
 let navigation = document.getElementById("navigation");
 let about = document.getElementById("about");
 let offer = document.getElementById("offer");
@@ -14,10 +12,30 @@ let faq = document.getElementById("faq");
 let footer = document.getElementById("footer");
 let links = navigation.querySelectorAll(".header__link");
 let procedures = price.querySelectorAll(".procedures__item");
+let faqItem = faq.querySelectorAll('.faq__item');
 
 let pages = [about, offer, studio, price, faq, footer];
 
-rotateHandler();
+faqItem.forEach(item => {
+    item.addEventListener('click', () => {
+        const question = item.querySelector(".faq__question");
+        const answer = question.nextElementSibling;
+        const plus = question.children[0];
+        answer.classList.toggle('show');
+        if (answer.classList.contains('show')) {
+            plus.style.transform = "rotate(45deg)";
+        } else {
+            plus.style.transform = "rotate(0deg)";
+        }
+    });
+});
+
+studio.querySelector(".studio__details").addEventListener('click', () => {
+    studio.querySelector(".studio__details").style.display = "none";
+    const hidden = studio.querySelector(".studio__hidden");
+    hidden.classList.toggle('show');
+})
+
 scrollHandler(pages, navigation, links);
 
 procedures.forEach(item => {

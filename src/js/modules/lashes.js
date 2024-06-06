@@ -1,4 +1,4 @@
-export default function Skins() {
+export default function Lashes() {
     return `<ul class="price__list">
     <li class="price__item">
         <span class="price__name">Ламинирование ресниц</span>

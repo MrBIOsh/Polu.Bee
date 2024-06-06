@@ -3,17 +3,20 @@ let pageYTop = function(page) { return page.getBoundingClientRect().top + window
 let pageYBottom = function(page) { return page.getBoundingClientRect().bottom + window.scrollY };
 
 function scrollHandler(pages, header, links) {
+  let logo = header.querySelector('.header__logo');
   window.addEventListener('scroll', function() {
     if (window.scrollY >= pageYTop(pages[0]) - 200) {
       header.style.top = 50 + "%";
       header.style.transform = "translateY(-50%)";
+      logo.style.opacity = 0;
       for (let i = 0; i < links.length; i++) {
         links[i].style.opacity = 0.3;
         links[i].style.color = "#FFF";
       };  
     } else {
       header.style.top = 0;
-      header.style.transform = "translateY(0)";
+      header.style.transform = "translateY(0)";      
+      logo.style.opacity = 1;
       for (let i = 0; i < links.length; i++) {
         links[i].style.opacity = 1;
         links[i].style.color = "#FFF";

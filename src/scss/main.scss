@@ -73,6 +73,7 @@ ul, p {
 	&__logo {
 		width: 60px;
 		height: 60px;
+        transition: .2s;
 	}
 
 	&__link {
@@ -94,7 +95,7 @@ ul, p {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 150px;
+    gap: 75px;
     // align-items: center;
     margin: 0 auto;
 }
@@ -113,7 +114,7 @@ main {
     gap: 150px;
     padding-top: 100px;
     padding-left: 300px;
-    padding-bottom: 150px;
+    padding-bottom: 75px;
 }
 
 .home {
@@ -210,6 +211,7 @@ main {
 
 .description {
     font-family: Inter;
+    font-size: 18px;
 }
 
 .box {
@@ -224,6 +226,7 @@ main {
 }
 
 .about {
+    padding-top: 75px;
     // display: flex;
     // flex-direction: column;
     // gap: 30px;
@@ -247,7 +250,6 @@ main {
 
     &__item {
         width: var(--size-var);
-        height: 100%;
         border-radius: 50%;
         overflow: hidden;
         flex: none;
@@ -256,6 +258,11 @@ main {
             max-width: none;
             border-radius: 50%;
             object-fit: cover;
+            > img {                
+                max-width: none;
+                width: 115%;
+                object-position: -35px -216px;
+            }
         }
 
         &:not(:first-child) {
@@ -265,11 +272,11 @@ main {
             border-radius: 0 100% 100% 0 / 0 50% 50% 0;
         }
 
-        &:nth-child(3) {
-            // border-radius: 0 100% 100% 0/0 50% 50% 0;
-            // width: 236px;
+        &:nth-child(3) > img {
+            height: 100%;
             object-fit: none;
         }
+        
         &:last-child {
             position: relative;
 
@@ -288,6 +295,7 @@ main {
 }
 
 .offer {
+    padding-top: 75px;
     // display: flex;
     // flex-direction: column;
     // gap: 30px;
@@ -328,12 +336,14 @@ main {
 }
 
 .studio {
+    padding-top: 75px;
 
     &__box {
         gap: 30px;
         width: 100%;
         max-width: none;
         align-items: center;
+        overflow: hidden;
     }
 
     &__text {
@@ -344,12 +354,18 @@ main {
         max-width: 475px;
     }
 
+    &__description {
+        font-size: 18px;
+    }
+
     &__list {
-        margin-left: 18px;
+        margin-left: 28px;
+        line-height: 1.24;
     }
 
     &__item {
         list-style: disc;
+        font-size: 18px;
     }
 
     &__hidden {
@@ -357,6 +373,7 @@ main {
         flex-direction: column;
         gap: 30px;            
         align-self: stretch;
+        max-height: 0;
 
         > .studio__text {
             align-self: center;
@@ -427,6 +444,8 @@ main {
 }
 
 .price {
+    padding-top: 75px;
+
     &__procedures {
         display: flex;
         justify-content: space-between;
@@ -437,23 +456,21 @@ main {
         width: 100%;
         max-width: 895px;
         background-color: #222224;
-        padding: 10px 35px 10px 40px;
+        padding: 10px 35px 5px 40px;
         position: relative;
     }
 
     &__content {
-        width: 53%;
+        width: 58%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
     &__list {
-        font-family: Inter;
         color: #fff;
         padding: 5px 0;
         position: relative;
-        line-height: 1.45 ;
         font-size: 18px;
         &:first-child {
             padding-top: 0;
@@ -477,19 +494,23 @@ main {
     &__item {
         display: flex;
         justify-content: space-between;
+        
     }
 
     &__name {
-        flex-basis: 70%;
+        flex-basis: 71%;
+        line-height: 1.225;
     }
 
     &__description {
         font-size: 14px;
+        line-height: 1.22;
     }
 
     &__logo {
         position: absolute;
-        top: 25%;
+        transform: translate(0, -50%);
+        top: 50%;
         right: 0;
         width: 375px;
         height: 295px;
@@ -504,7 +525,7 @@ main {
     color: #fff;
     &__item {
         position: relative;
-        padding: 12px 0;
+        padding: 11.58px 0;
         cursor: pointer;
         // border-top: 1px solid;
         // border-image-slice: 1;
@@ -543,14 +564,18 @@ main {
         gap: 35px;
         font-size: 32px;
         opacity: .3;
+        line-height: 0.7;
         span {
             font-family: Inter;
             font-size: 18px;
+            line-height: 1.4;
         }
     }
 }
 
 .faq {
+    padding-top: 75px;
+
     &__box {
         margin: 0 auto;
         width: 100%;
@@ -560,10 +585,9 @@ main {
         gap: 30px;
     }
     &__item {
-        padding: 10px 0;
         position: relative;
-        overflow: hidden;
-        height: 62px;
+        // overflow: hidden;
+        cursor: pointer;
         transition: .2s;
         &:first-child::before {
             content: '';
@@ -587,15 +611,30 @@ main {
     &__question {        
         font-size: 18px;
         max-width: 315px;
+        padding: 10px 0;
     }
     &__answer {
         font-size: 14px;
-        padding-top: 10px;
-        max-width: 400px;
+        max-width: 400px;        
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .4s ease-in-out, padding-bottom .5s;
     }
 }
 
+.show {
+    max-height: 1500px;
+    padding-bottom: 10px;
+    transition: max-height .4s ease-in-out, padding-bottom .5s;
+}
+
+.studio__hidden + .show {
+    padding: 0;
+}
+
 .invite {
+    padding-top: 75px;
+
     &__mask {
         width: 100%;
         height: 328px;      
@@ -611,6 +650,7 @@ main {
 }
 
 .footer {
+    padding-top: 75px;
     padding-left: 300px;
     padding-bottom: 50px;
 
@@ -703,6 +743,7 @@ main {
 .active {
     color: $orange;
     opacity: 1;
+    transition: .2s;
 }
 
 // .gradient {
