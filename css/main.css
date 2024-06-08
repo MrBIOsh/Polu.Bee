@@ -668,6 +668,12 @@ main {
   line-height: 1.4;
 }
 
+.procedures__name:hover {
+  color: #FBB88C;
+  opacity: 1;
+  transition: 0.2s;
+}
+
 .faq {
   padding-top: 75px;
 }
