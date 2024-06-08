@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Стартовый шаблон</title>
-		<link rel="stylesheet" href="./css/main.css" />
-	</head>
+	@@include('blocks/head.html', {
+		"title":"BLISSCO"
+	})
 	<svg class="mask" width="0" height="0" style="position:absolute">
 		<defs>
 			<clipPath id="clip">
@@ -23,16 +19,18 @@
 					<div class="container">
 						<section id="home" class="home">
 							<div class="home__box">
-								<img class="home__img" src="../img/jpg/Group 738002237.png" alt="img">
+								<img class="home__img" src="@img/jpg/Group 738002237.png" alt="img">
 							</div>
 							<div class="home__flex">
 								<div class="home__item">
 									<h1 class="home__header">Студия красоты
 										Алёны Бурховецкой</h1>
-									<a href="#" class="button">Записаться онлайн</a>
+									<a href="https://dikidi.ru/ru/mobile/newrecord/index2?company=980866&p=1.pi-po" class="button">Записаться онлайн</a>
 								</div>
 								<!-- <div class="home__img">								 -->
-									<img src="../img/jpg/Photo_header.jpg" alt="photo" class="home__photo">
+								<div class="home__item">
+									<img src="@img/jpg/Photo_header.jpg" alt="photo" class="home__photo">
+								</div>
 								<!-- </div> -->
 							</div>
 						</section>
@@ -47,13 +45,13 @@
 								</div>
 								<div class="about__img">
 									<div class="about__item">
-										<img src="../img/jpg/Photo_header.jpg" alt="photo">
+										<img src="@img/jpg/Photo_header.jpg" alt="photo">
 									</div>
 									<div class="about__item">
-										<img src="../img/svg/halfCircleGr.svg" alt="halfCircleGr">
+										<img src="@img/svg/halfCircleGr.svg" alt="halfCircleGr">
 									</div>
 									<div class="about__item">
-										<img src="../img/jpg/Photo_about_me.jpg" alt="photo">
+										<img src="@img/jpg/Photo_about_me.jpg" alt="photo">
 									</div>
 									<div class="about__item"></div>
 									<!-- <div class="about__item"> -->
@@ -82,23 +80,23 @@
 								<div class="title">
 									<pre style="white-space: pre-wrap"><h2>                          У нас действует система скидок, кэшбек на всё, а также есть выгодные предложения при покупке абонементов</h2></pre>
 								</div>
-								<div class="offer__box box">
+								<div class="box">
 									<ul class="offer__list">
 										<li class="offer__item">
 											<span class="offer__discount">20%</span>
-											<p class="offer__description">заложены в стоимость комплексов услуг </p>
+											<p class="description">заложены в стоимость комплексов услуг </p>
 										</li>
 										<li class="offer__item">
 											<span class="offer__discount">30%</span>
-											<p class="offer__description">при покупке абонемента на 5 процедур</p>
+											<p class="description">при покупке абонемента на 5 процедур</p>
 										</li>
 										<li class="offer__item">
 											<span class="offer__discount">35%</span>
-											<p class="offer__description">при покупке абонемента на 10 процедур</p>
+											<p class="description">при покупке абонемента на 10 процедур</p>
 										</li>
 										<li class="offer__item">
 											<span class="offer__discount">3%<pre style="display: inline-block; font-size: 18px"> кэшбек</pre></span>
-											<p class="offer__description">при оплате процедур  косметической продукции</p>
+											<p class="description">при оплате процедур  косметической продукции</p>
 										</li>
 									</ul>
 									<a href="#" class="button">получить скидку</a>
@@ -108,10 +106,10 @@
 						<section id="studio" class="studio">
 							<div class="wrapper">
 								<div class="title">
-									<pre style="white-space: pre-wrap"><h2>                          В студии POLU.BEE продумано всё для вашего удобства и комфорта</h2></pre>
+									<pre style="white-space: pre-wrap"><h2>                          В студии BLISSCO продумано всё для вашего удобства и комфорта</h2></pre>
 								</div>
 								<div class="studio__box box">
-									<div class="studio__text">
+									<div class="studio__text description">
 										<p class="studio__description">Мы приготовили для вас разнообразные напитки и угощения:</p>
 											<ul class="studio__list">
 												<li class="studio__item">Широкий ассортимент чаёв, завариваемых по вашим вкусовым предпочтениям</li>
@@ -126,10 +124,10 @@
 									<div class="studio__hidden">
 										<div class="studio__images">
 											<div class="studio__img">												
-												<img src="../img/jpg/Photo_about_studio_1.jpg" alt="photo">
-												<img src="../img/jpg/Photo_about_studio_2.jpg" alt="photo">
+												<img src="@img/jpg/Photo_about_studio_1.jpg" alt="photo">
+												<img src="@img/jpg/Photo_about_studio_2.jpg" alt="photo">
 											</div>
-											<img src="../img/jpg/Photo_about_studio_3.jpg" alt="photo" class="studio__img">
+											<img src="@img/jpg/Photo_about_studio_3.jpg" alt="photo" class="studio__img">
 										</div>
 										<div class="studio__text">
 											<p class="studio__description">В студии установлен проектор на всю стену в зоне ожидания, в кабинете есть телевизор. На выбор представляется широкий спектр мультфильмов, фильмов и сериалов. Чтобы ожидание было приятным, в студии есть приставка SEGA с огромным количеством игр, а также бесплатный Wi-Fi.</p>
@@ -261,11 +259,11 @@
 											</ul>
 										</div>
 										<div class="price__logo">
-											<img src="../img/jpg/BLISSCO-beauty.png" alt="logo">
+											<img src="@img/jpg/BLISSCO-beauty.png" alt="logo">
 										</div>
 									</div>
 								</div>
-								<a href="#" class="button">Записаться онлайн</a>
+								<a href="https://dikidi.ru/ru/mobile/newrecord/index2?company=980866&p=1.pi-po" class="button">Записаться онлайн</a>
 							</div>
 						</section>
 						<section id="faq" class="faq">
@@ -325,7 +323,7 @@
 										</li>
 									</ul>
 									<!-- <span class="studio__details">Узнать больше</span> -->
-									<a href="#" class="button">Записаться онлайн</a>
+									<a href="https://dikidi.ru/ru/mobile/newrecord/index2?company=980866&p=1.pi-po" class="button">Записаться онлайн</a>
 								</div>
 							</div>
 						</section>
@@ -335,8 +333,10 @@
 									<pre style="white-space: pre-wrap"><h2>                          Насладитесь комфортом в студии BLISSCO, а я позабочусь о вас</h2></pre>
 								</div>
 								<div class="faq__box">
-									<div class="invite__mask"></div>
-									<a href="#" class="button">Записаться онлайн</a>
+									<div class="invite__mask">
+										<img src="@img/jpg/Photo_FAQ.jpg" alt="Photo">
+									</div>
+									<a href="https://dikidi.ru/ru/mobile/newrecord/index2?company=980866&p=1.pi-po" class="button">Записаться онлайн</a>
 								</div>
 							</div>
 						</section>

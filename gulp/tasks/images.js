@@ -1,5 +1,5 @@
 import webp from "gulp-webp";
-import imagemin from "gulp-imagemin";
+import imagemin, {optipng, svgo} from "gulp-imagemin";
 
 export const images = () => {
     return app.gulp.src(app.path.src.images)
@@ -9,44 +9,57 @@ export const images = () => {
             message: "Error: <%= error.message %>"
         }))
     )
-    .pipe(app.plugins.newer(app.path.build.images))
     .pipe(
         app.plugins.if(
             app.isBuild,
-            webp(),
+            app.gulp.src(app.path.src.images)
         )
     )
     .pipe(
         app.plugins.if(
             app.isBuild,
-            app.gulp.dest(app.path.build.images),
+            app.plugins.newer(app.path.build.images)
         )
     )
     .pipe(
         app.plugins.if(
             app.isBuild,
-            app.gulp.src(app.path.src.images),
-        )
-    )
-    .pipe(
-        app.plugins.if(
-            app.isBuild,
-            app.plugins.newer(app.path.build.images),
-        )
-    )
-    .pipe(
-        app.plugins.if(
-            app.isBuild,
-            imagemin({
-                progressive: true,
-                svgoPlugins: [{ removeViewBox: false }],
-                interlaced: true,
-                optimizationLevel: 3, // 0 to 7
-            })
+            imagemin([
+                optipng({optimizationLevel: 3}),
+                svgo({
+                    plugins: [
+                        {
+                            name: 'removeViewBox',
+                            active: true
+                        },
+                        {
+                            name: 'cleanupIDs',
+                            active: false
+                        }
+                    ]
+                })
+            ])
         )
     )
     .pipe(app.gulp.dest(app.path.build.images))
     .pipe(app.gulp.src(app.path.src.svg))    
     .pipe(app.gulp.dest(app.path.build.images)) // Add files from src to build
     .pipe(app.plugins.browserSync.stream())
+}
+
+export const webpConvert = () => {
+    return app.gulp.src(`${app.path.srcFolder}/img/jpg/*.{png,tiff.webp}`)
+    .pipe(app.plugins.newer(app.path.build.images))
+    .pipe(
+        app.plugins.if(
+            app.isBuild,
+            webp()
+        )
+    )
+    .pipe(
+        app.plugins.if(
+            app.isBuild,
+            app.gulp.dest(`${app.path.build.images}jpg/`)
+        )
+    )
 }

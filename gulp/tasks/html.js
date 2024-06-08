@@ -12,12 +12,13 @@ export const html = () => {
     )
     .pipe(fileInclude()) // Get files from src
     .pipe(app.plugins.replace(/@img\//g, 'img/'))
-    .pipe(
-        app.plugins.if(
-            app.isBuild,
-            webpHtmlNosvg()
-        )
-    )
+    // .pipe(
+    //     app.plugins.if(
+    //         app.isBuild,
+    //         webpHtmlNosvg()
+    //     )
+    // )
+    .pipe(app.plugins.replace(/img.webp\//g, 'img/jpg/'))
     .pipe(
         app.plugins.if(
             app.isBuild,
