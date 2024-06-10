@@ -1,14 +1,140 @@
+// .footer {
+// 	background-color: rgb(62, 62, 62);
+// 	padding: 50px 0;
+// 	font-size: 32px;
+//     color: #fff;
+
+// 	h1 {
+// 		font-size: 32px;
+// 	}
+
+// 	@media (max-width: 1200px) {
+// 		font-size: 26px;
+// 	}
+// }
+
 .footer {
-	background-color: rgb(62, 62, 62);
-	padding: 50px 0;
-	font-size: 32px;
-    color: #fff;
+    padding-top: 75px;
+    padding-left: 300px;
+    padding-bottom: 50px;
 
-	h1 {
-		font-size: 32px;
+	@media (max-width: 1150px) {
+		padding-left: 0;
 	}
 
-	@media (max-width: 1200px) {
-		font-size: 26px;
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+
+    &__head {
+        display: flex;
+        gap: 155px;
+
+		@media (max-width: 1200px) {
+			gap: 70px;
+		}
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+		@media (max-width: 1200px) {
+			gap: 10px;
+		}
+
+		> img {
+			width: 477px;
+			height: 100px;
+
+			@media (max-width: 1200px) {
+				width: 384px;
+				height: 80px;
+			}
+		}
+    }
+
+    &__svg {
+        width: 170px;
+        height: 207px;
+        object-fit: cover;
+
+		@media (max-width: 1200px) {
+			width: 117px;
+			height: 143px;
+		}
+    }
+
+    &__title {
+        max-width: 400px;
+    }
+
+	&__widget {
+		height: 520px;
+
+		@media (max-width: 1200px) {
+			height: 400px;
+		}
 	}
+
+    &__links {
+        display: flex;
+        gap: 20px;
+
+        > a {
+            display: block;
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .instagram {
+        background-image: url("../img/svg/Instagram.svg");        
+    }
+
+    .dikidi {
+        background-image: url("../img/svg/Dikidi.svg");
+    }
+
+    .whatsapp {
+        background-image: url("../img/svg/WhatsApp.svg");
+    }
+
+    &__description {
+        color: #fff;
+        font-size: 18px;
+        font-family: Inter;
+        width: 350px;
+        font-weight: 300;
+    }
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding-top: 10px;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(to right, #FFFFFF 0%, #7A7775 65.67%, #0D1215 100%);
+            opacity: .5;
+        }
+    }
+
+    &__author {
+        > a {
+            color: #fff;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+    }
 }

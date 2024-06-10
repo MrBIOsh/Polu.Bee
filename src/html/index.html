@@ -123,10 +123,12 @@
 									</div>
 									<div class="studio__hidden">
 										<div class="studio__images">
-											<div class="studio__img">												
+											<img src="@img/jpg/Photo_about_studio_1.jpg" alt="photo">
+											<img src="@img/jpg/Photo_about_studio_2.jpg" alt="photo">
+											<!-- <div class="studio__img">												
 												<img src="@img/jpg/Photo_about_studio_1.jpg" alt="photo">
 												<img src="@img/jpg/Photo_about_studio_2.jpg" alt="photo">
-											</div>
+											</div> -->
 											<img src="@img/jpg/Photo_about_studio_3.jpg" alt="photo" class="studio__img">
 										</div>
 										<div class="studio__text">
@@ -140,7 +142,7 @@
 						<section id="price" class="price">
 							<div class="wrapper">
 								<div class="title">
-									<pre style="white-space: pre-wrap"><h2>                         У нас широкий спектр услуг по приятным ценам, а В стоимость комплексов услуг заложена 20% скидка</h2></pre>
+									<pre style="white-space: pre-wrap"><h2>                          У нас широкий спектр услуг по приятным ценам, а В стоимость комплексов услуг заложена 20% скидка</h2></pre>
 								</div>
 								<div class="price__procedures procedures">
 									<div class="procedures__menu">
@@ -271,7 +273,7 @@
 								<div class="title">
 									<pre style="white-space: pre-wrap"><h2>                          Здесь вы найдёте ответы на важные для вас вопросы, а также сможете связаться с нами</h2></pre>
 								</div>
-								<div class="faq__box">
+								<div class="box">
 									<ul class="faq__list">
 										<li class="faq__item">
 											<h4 class="faq__question">Какой аппарат используется для лазерной эпиляции?<svg class="plus" width="16" height="16" viewBox="0 0 16 16" style="transition: .2s"><path d="M 7 0 L 9 0 L 9 16 L 7 16 L 7 0 M 0 7 L 16 7 L 16 9 L 0 9 L 0 7" fill="white"/></svg></h4>
@@ -332,7 +334,7 @@
 								<div class="title">
 									<pre style="white-space: pre-wrap"><h2>                          Насладитесь комфортом в студии BLISSCO, а я позабочусь о вас</h2></pre>
 								</div>
-								<div class="faq__box">
+								<div class="box">
 									<div class="invite__mask">
 										<img src="@img/jpg/Photo_FAQ.jpg" alt="Photo">
 									</div>
@@ -343,6 +345,9 @@
 					</div>
 				</main>
 				@@include('blocks/footer.html')
+				<div class="modal" id="modal">
+					@@include('blocks/modal.html')
+				</div>
 			<!-- </div> -->
 		<!-- </div> -->
 		<script src="./js/app.min.js"></script>

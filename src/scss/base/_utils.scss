@@ -1,0 +1,57 @@
+.btn {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.burger {
+    background-image: url("../img/svg/burger.svg");
+}
+
+.close {
+    background-image: url("../img/svg/close.svg");
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: -1100px;
+    width: 100%;
+    transition: .4s;
+    background-color: #222224;
+
+    @media (max-width: 1150px) {   
+        display: block;
+        .header {
+            .container {
+                padding: 55px 35px 37px;
+                gap: 0;
+            }
+            .btn {
+                align-self: start;
+            }
+            nav {
+                display: block;
+            }
+            &__navigation {
+                flex-direction: column;
+                gap: 42px;
+            }
+            &__list {
+                align-items: center;
+                gap: 25px;
+            }
+            &__item {
+                font-size: 40px;
+            }
+            &__logo {
+                width: 430px;
+                height: auto;
+            }
+        }
+    }
+}

@@ -2,17 +2,21 @@
 // mobileNav();
 import {scrollHandler} from "./handlers/scrollHandler.js";
 import {handleClick} from "./handlers/activeHandler.js";
+import {closeModal, openModal, clickLinkModal} from "./modules/modal.js";
 
-let navigation = document.getElementById("navigation");
-let about = document.getElementById("about");
-let offer = document.getElementById("offer");
-let studio = document.getElementById("studio");
-let price = document.getElementById("price");
-let faq = document.getElementById("faq");
-let footer = document.getElementById("footer");
-let links = navigation.querySelectorAll(".header__link");
-let procedures = price.querySelectorAll(".procedures__item");
-let faqItem = faq.querySelectorAll('.faq__item');
+const navigation = document.getElementById("navigation");
+const about = document.getElementById("about");
+const offer = document.getElementById("offer");
+const studio = document.getElementById("studio");
+const price = document.getElementById("price");
+const faq = document.getElementById("faq");
+const footer = document.getElementById("footer");
+const links = navigation.querySelectorAll(".header__link");
+const procedures = price.querySelectorAll(".procedures__item");
+const faqItem = faq.querySelectorAll('.faq__item');
+const modal = document.getElementById("modal");
+const modalLinks = modal.querySelectorAll(".header__link");
+
 
 let pages = [about, offer, studio, price, faq, footer];
 
@@ -36,7 +40,22 @@ studio.querySelector(".studio__details").addEventListener('click', () => {
     hidden.classList.toggle('show');
 })
 
-scrollHandler(pages, navigation, links);
+function scroll() {
+    scrollHandler(pages, navigation, links);
+}
+
+function checkWindowSize() {
+    const width = window.innerWidth; 
+    if (width > 1250) {
+        window.addEventListener('scroll', scroll);
+    } else { console.log('1')
+        window.removeEventListener('scroll', scroll);
+    }
+}
+window.addEventListener('resize', () => {checkWindowSize()});
+window.addEventListener('load', () => {checkWindowSize()});
+// scrollHandler(pages, navigation, links);
+
 
 procedures.forEach(item => {
     let name = item.querySelector(".procedures__name");
@@ -61,3 +80,8 @@ document.querySelectorAll(".header__link").forEach(link => {
     });
 });
 
+openModal();
+closeModal();
+modalLinks.forEach(link => {
+    link.addEventListener('click', clickLinkModal);
+})

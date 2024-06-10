@@ -12,6 +12,12 @@ $orange: #FBB88C;
     --laptop-size: 1199px;
 	--tablet-size: 959px;
 	--mobile-size: 599px;
+
+	--padding: 75px;
+
+	@media (max-width: 1250px) {
+		--padding: 56px;
+	}
 }
 
 // .dark {
