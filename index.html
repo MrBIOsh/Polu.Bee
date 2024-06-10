@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.min.css?_v=20240609003246">
+    <link rel="stylesheet" href="css/main.min.css?_v=20240610215201">
     <title>BLISSCO</title>
 </head>
 	<svg class="mask" width="0" height="0" style="position:absolute">
@@ -20,28 +20,33 @@
 			<header class="header">
     <div class="container">
         <div id="navigation" class="header__navigation">
-            <nav class="header__nav">
-                <ul class="header__list">
-                    <li class="header__item">
-                        <a href="#about" class="header__link">О специалисте</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#offer" class="header__link">выгодные предложения</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#studio" class="header__link">о студии</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#price" class="header__link">прайс</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#faq" class="header__link">ответы на ваши вопросы</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="#footer" class="header__link">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="header__item">   
+                <div class="header__burger">
+                    <button class="btn burger" id="burger"></button>
+                </div>             
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#about" class="header__link">О специалисте</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#offer" class="header__link">выгодные предложения</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#studio" class="header__link">о студии</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#price" class="header__link">прайс</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#faq" class="header__link">ответы на ваши вопросы</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#footer" class="header__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
             <img src="img/svg/logo.svg" alt="logo" class="header__logo">
         </div>
     </div>
@@ -156,10 +161,12 @@
 									</div>
 									<div class="studio__hidden">
 										<div class="studio__images">
-											<div class="studio__img">												
+											<img src="img/jpg/Photo_about_studio_1.jpg" alt="photo">
+											<img src="img/jpg/Photo_about_studio_2.jpg" alt="photo">
+											<!-- <div class="studio__img">												
 												<img src="img/jpg/Photo_about_studio_1.jpg" alt="photo">
 												<img src="img/jpg/Photo_about_studio_2.jpg" alt="photo">
-											</div>
+											</div> -->
 											<img src="img/jpg/Photo_about_studio_3.jpg" alt="photo" class="studio__img">
 										</div>
 										<div class="studio__text">
@@ -173,7 +180,7 @@
 						<section id="price" class="price">
 							<div class="wrapper">
 								<div class="title">
-									<pre style="white-space: pre-wrap"><h2>                         У нас широкий спектр услуг по приятным ценам, а В стоимость комплексов услуг заложена 20% скидка</h2></pre>
+									<pre style="white-space: pre-wrap"><h2>                          У нас широкий спектр услуг по приятным ценам, а В стоимость комплексов услуг заложена 20% скидка</h2></pre>
 								</div>
 								<div class="price__procedures procedures">
 									<div class="procedures__menu">
@@ -304,7 +311,7 @@
 								<div class="title">
 									<pre style="white-space: pre-wrap"><h2>                          Здесь вы найдёте ответы на важные для вас вопросы, а также сможете связаться с нами</h2></pre>
 								</div>
-								<div class="faq__box">
+								<div class="box">
 									<ul class="faq__list">
 										<li class="faq__item">
 											<h4 class="faq__question">Какой аппарат используется для лазерной эпиляции?<svg class="plus" width="16" height="16" viewBox="0 0 16 16" style="transition: .2s"><path d="M 7 0 L 9 0 L 9 16 L 7 16 L 7 0 M 0 7 L 16 7 L 16 9 L 0 9 L 0 7" fill="white"/></svg></h4>
@@ -365,7 +372,7 @@
 								<div class="title">
 									<pre style="white-space: pre-wrap"><h2>                          Насладитесь комфортом в студии BLISSCO, а я позабочусь о вас</h2></pre>
 								</div>
-								<div class="faq__box">
+								<div class="box">
 									<div class="invite__mask">
 										<img src="img/jpg/Photo_FAQ.jpg" alt="Photo">
 									</div>
@@ -382,11 +389,11 @@
 				<img src="img/svg/logo.svg" alt="svg" class="footer__svg">
 				<div class="footer__item">
 					<img src="img/svg/BLISSCO-footer.svg" alt="svg">
-					<h2 class="title footer__title">Студия красоты Алёны Бурховецкой</h2>
+					<h2 class="footer__title title">Студия красоты Алёны Бурховецкой</h2>
 				</div>
 			</div>
 			<div class="footer__widget">
-				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A415413bb744af8b7e787527cc143dd907977c7c6a0792bec6838b06a1e25c426&amp;source=constructor" width="100%" height="520" frameborder="0" style="border-radius: 100px 0; filter: grayscale(1) invert(95%) hue-rotate(180deg);"></iframe>
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A415413bb744af8b7e787527cc143dd907977c7c6a0792bec6838b06a1e25c426&amp;source=constructor" width="100%" height="100%" frameborder="0" style="border-radius: 100px 0; filter: grayscale(1) invert(95%) hue-rotate(180deg);"></iframe>
 			</div>
 			<div class="footer__links">
 				<a href="#" class="instagram"></a>
@@ -402,8 +409,43 @@
 	</div>
 </footer>
 
+				<div class="modal" id="modal">
+					<header class="header">
+    <div class="container">
+        <button class="btn close" id="close"></button>
+        <div id="navigation" class="header__navigation">
+            <div class="header__item">           
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#about" class="header__link">О специалисте</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#offer" class="header__link">выгодные предложения</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#studio" class="header__link">о студии</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#price" class="header__link">прайс</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#faq" class="header__link">ответы на ваши вопросы</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#footer" class="header__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <img src="img/jpg/BLISSCO-beauty.png" alt="logo" class="header__logo">
+        </div>
+    </div>
+</header>
+
+				</div>
 			<!-- </div> -->
 		<!-- </div> -->
-		<script src="./js/app.min.js?_v=20240609003246"></script>
+		<script src="./js/app.min.js?_v=20240610215201"></script>
 	</body>
 </html>
