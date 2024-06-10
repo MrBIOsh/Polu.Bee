@@ -69,7 +69,7 @@ document.querySelectorAll(".header__link").forEach(link => {
         let href = this.getAttribute('href').substring(1);
 
         const scrollTarget = document.getElementById(href);
-        const topOffset = 0;
+        const topOffset = 75;
         const elementPosition = scrollTarget.getBoundingClientRect().top;
         const offsetPosition = elementPosition - topOffset;
 

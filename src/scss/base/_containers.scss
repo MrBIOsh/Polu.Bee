@@ -5,11 +5,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 75px;
+    gap: 150px;
     margin: 0 auto;
 
-    @media (max-width: 1150px) {
-        max-width: 1000px;
+    @media (max-width: 1200px) {
+        max-width: 900px;
         padding: 0 40px;
         gap: 56px;
     }

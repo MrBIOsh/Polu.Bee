@@ -16,12 +16,12 @@
 
         > .header__item {            
             flex-basis: 1420px;
-            @media (max-width: 1150px) {
+            @media (max-width: 1200px) {
                 flex-basis: auto;
             }
         }
 
-        @media (max-width: 1150px) {
+        @media (max-width: 1200px) {
             position: static;
             padding: 20px 0;
             justify-content: space-between;
@@ -30,7 +30,7 @@
 	}
 
     &__nav {
-        @media (max-width: 1150px) {            
+        @media (max-width: 1200px) {            
             display: none;
         }
     }
@@ -61,7 +61,7 @@
     &__burger {        
         display: none;
 
-        @media (max-width: 1150px) {
+        @media (max-width: 1200px) {
             display: block;
         }
     }
